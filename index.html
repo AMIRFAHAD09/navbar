@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sign up and login</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- animated class -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- cdn icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- for font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- script -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        $('.js-scroll-trigger').click(function(){
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar  navbar-expand-md fixed-top navbar-white bg-dark p-0">
+        <a class="navbar-brand" href="">
+            <img class="ms-lg-3 " src="charging-.png" style="width: 110px; height:80px;" alt="">
+        </a>
+
+        <i id="bbar" class="fa fa-bars navbar-toggler bar" data-bs-toggle="collapse" data-bs-target="#menu"></i>
+
+    <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav nav-fills nav-tab  ms-lg-5 ms-md-0">
+        <li class="nav-item"><a class="nav-link js-scroll-trigger my-xs-1 mx-md-0 mx-lg-2" href="">Home</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger my-xs-2 mx-md-0 mx-lg-2" data-toggle="tab" href="">Contact</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger ms-md-0 mx-lg-2" href="">About</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger ms-md-0 mx-lg-2" href="">follow</a></li>
+        <li class="nav-item dropdown" >
+            <a class="nav-link js-scroll-trigger ms-md-0 mx-lg-2 dropdown-toggle " data-bs-toggle="dropdown" href="">Member</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item js-scroll-trigger" href="">Arunava</a>
+                <a class="dropdown-item js-scroll-trigger" href="">Gautam</a>
+                <a class="dropdown-item js-scroll-trigger" href="">Abdul</a>
+                <a class="dropdown-item js-scroll-trigger" href="">Nahid</a>
+            </div>
+        </li>
+    </ul>
+    <form class="d-flex" action="">
+        <input id="search_btn" class="form-control ms-lg-3 my-lg-3" type="search" placeholder="search">
+    </form>
+    <ul class="navbar-nav ms-auto mx-2 my-3">
+    <!-- <li class="nav-item"><a class="nav-link " href="">Login /</a></li>
+    <li class="nav-item px-0"><a class="nav-link " href="">Signup</a></li> -->
+    <button id="login_open_btn" class="btn btn-outline-info js-scroll-trigger mx-md-1 mx-2 my-3" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Login</button>
+    <button id="signup_open_btn" class="btn btn-outline-info js-scroll-trigger mx-md-1 mx-2 my-3" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sign up</button>
+    </ul>
+    </div>
+    </nav>
+
+    <!-- LOGIN FORM START HERE --> 
+<div id="container" class="">
+    <div id="page">
+            <div id="login" class="animate__animated animate__fadeInLeft logclose"> 
+                <button id="closeLform" type="button" class="btn-close" aria-label="Close"></button>   
+            <center><img id="login_logo" src="charging-.png" alt=""></center>
+                <h1>Login</h1>
+            
+                <form id="login_frm" required="required" autocomplete="off">
+                    
+                <input type="email" id="log_email" required="required" placeholder="Email" autocomplete="off">
+                <small id="logemail_notice"> <i class="fa-solid fa-triangle-exclamation"></i> Email id not registerd</small>
+                
+        
+                <input type="password" id="log_password" required="required" placeholder="Password" autocomplete="off">
+                <small id="logpassword_notice"> <i class="fa-solid fa-triangle-exclamation"></i> wrong password</small>
+                
+                <a id="forget_pass" href="">Forgot Passward</a>
+                <button type="submit" id="login_btn">Login</button>
+                </form>
+                 <!-- link use for login page to sign up -->
+                 <p>Don't have an account <span id="sign_link">sign up</span></p>
+            </div>
+            <!-- login form end here -->
+       
+            <!-- sign up form start from here -->
+        <div id="sign_up" class="animate__animated animate__fadeInRight">
+        <button id="closeSform" type="button" class="btn-close" aria-label="Close"></button>
+        <center><img id="login_logo" src="charging-.png" alt=""></center>
+        <h1>sign up</h1>
+        <form id="sign_frm" autocomplete="off">
+
+        <input type="name" required="required" id="username"placeholder="Name" autocomplete="off">
+
+        <input type="email" required="required" id="email" placeholder="Email" autocomplete="off">
+        <small id="email_notice"> <i class="fa-solid fa-triangle-exclamation"></i> Email id Already exist</small>
+
+        <input type="number" required="required" id="phone" placeholder="Phone" autocomplete="off">
+        <small id="phone_notice"> <i class="fa-solid fa-triangle-exclamation"></i> Please check your Number</small>
+        
+
+        <input type="password" required="required" id="password"placeholder="Password" autocomplete="off">
+        <small id="pass_notice"> <i class="fa-solid fa-triangle-exclamation"></i> Atleast 6 digit Combination of latter & Number</small>
+        
+        <button type="submit" id="sign_btn">sign up</button>
+
+        </form>
+        <!-- this link use for sign up page to login page -->
+        <p>Already have an account <span id="login_link">Login</span></p>
+        </div>
+            
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
